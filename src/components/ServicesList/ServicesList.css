@@ -1,0 +1,33 @@
+.ServicesList {
+
+}
+
+.ServicesContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ServicesContainer img {
+    width: 100%;
+}
+
+.Service {
+    flex-basis: 33.33%;
+}
+
+.Card {
+    margin: 20px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.CardContent {
+    padding: 20px;
+}
+
+.CardTitle {
+    text-align: center;
+}
+
+.CardDescription {
+    text-align: center;
+}
