@@ -7,7 +7,9 @@ const heroBannerFullSize = (props) => (
     style={{
       backgroundImage: `url(${props.image})`
     }}
-  />
+  >
+    <div className={classes.Backdrop}/>
+  </div>
 );
 
 export default heroBannerFullSize;

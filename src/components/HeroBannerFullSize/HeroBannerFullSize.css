@@ -1,6 +1,16 @@
 .HeroImage {
+    position: relative;
     height: 100vh;
     width: 100%;
     background: no-repeat center center;
     background-size: auto 100%;
+}
+
+.Backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(9, 9, 9, 0.5);
 }

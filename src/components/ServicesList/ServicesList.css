@@ -5,6 +5,9 @@
 .ServicesContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1320px;
+    margin: auto;
 }
 
 .ServicesContainer img {
@@ -17,7 +20,7 @@
 
 .Card {
     margin: 20px;
-    box-shadow: 0 0 10px #ccc;
+    box-shadow: 2px 5px 20px #aaa;
 }
 
 .CardContent {

@@ -1,0 +1,9 @@
+.FooterNavigation li {
+    display: inline-block;
+    margin: 0 1em;
+}
+
+.FooterNavigation li a {
+    font-size: 1.3em;
+    transition: 0.2s;
+}
