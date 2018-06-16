@@ -1,28 +1,27 @@
 import React from 'react';
 import classes from './ContactUs.css';
+import SocialMediaButtons from '../SocialMediaButtons/SocialMediaButtons';
 
 const contactUs = () => (
   <div className={classes.ContactUs}>
     <h2>Contact</h2>
     <div className={classes.ContactUsContent}>
-      <div className="contact-form">
-        <p>We’re here to help. Let us know your questions, and be sure you’re in safe hands</p>
-        <form id="contact-form">
-          <div>
-            <label htmlFor="contact-name">Name</label>
-            <input type="text" placeholder="Name" id="contact-name"/>
-          </div>
-          <div>
-            <label htmlFor="contact-email">Email</label>
-            <input type="text" placeholder="Email" id="contact-email"/>
-          </div>
-          <div>
-            <label htmlFor="contact-message">Message</label>
-            <textarea placeholder="Message" id="contact-message" cols="10"/>
-          </div>
-          <button id="contact-button" className="button">Send Message</button>
-        </form>
+      <p>We’re here to help. Let us know your questions, and be sure you’re in safe hands</p>
+      <div className={classes.DirectContact}>
+        <div>
+          <a href="tel:+447845370910">
+            <i className="fa fa-phone"/>
+            +44 7845 370 910
+          </a>
+        </div>
+        <div>
+          <a href="mailto:hello@marketiu.com">
+            <i className="fa fa-envelope"/>
+            hello@marketiu.com
+          </a>
+        </div>
       </div>
+      <SocialMediaButtons/>
     </div>
   </div>
 );

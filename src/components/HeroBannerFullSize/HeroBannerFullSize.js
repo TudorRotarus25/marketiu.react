@@ -1,4 +1,5 @@
 import React from 'react';
+import Typing from 'react-typing-animation';
 import classes from './HeroBannerFullSize.css';
 import squareLogo from '../../assets/logos/square-logo.png';
 
@@ -15,8 +16,12 @@ const heroBannerFullSize = (props) => (
         <img src={squareLogo} alt="logo"/>
       </div>
       <div className={classes.Quote}>
-        <p>Driving Digital Marketing Intelligence & Innovation</p>
-        <p>Forwarding Digital Marketing Intelligence</p>
+        <Typing>
+          <span>
+            Driving Digital Marketing Intelligence & Innovation<br/>
+            Forwarding Digital Marketing Intelligence
+          </span>
+        </Typing>
       </div>
     </div>
   </div>

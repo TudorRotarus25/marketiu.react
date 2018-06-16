@@ -10,7 +10,7 @@ const blogSection = () => (
       <BlogList/>
       <Link
         to="/blog"
-        class="button"
+        className="button"
       >
         See All Articles
       </Link>

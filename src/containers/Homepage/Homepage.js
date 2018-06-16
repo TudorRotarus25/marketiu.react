@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './Homepage.css';
 import heroImage from '../../assets/images/banners/Home1.jpg';
 import HeroBannerFullSize from '../../components/HeroBannerFullSize/HeroBannerFullSize';
 import ServicesList from '../../components/ServicesList/ServicesList';

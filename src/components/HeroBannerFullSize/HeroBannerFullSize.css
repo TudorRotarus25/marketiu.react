@@ -22,9 +22,15 @@
 }
 
 .Logo {
-    padding-top: 85px;
+    padding-top: 60px;
 }
 
 .Logo img {
     width: 235px;
+}
+
+.Quote {
+    font-size: 1.4em;
+    height: 60px;
+    line-height: 1.5;
 }
