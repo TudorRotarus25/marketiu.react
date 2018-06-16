@@ -4,6 +4,8 @@ import HeroBannerFullSize from '../../components/HeroBannerFullSize/HeroBannerFu
 import ServicesList from '../../components/ServicesList/ServicesList';
 import AboutUs from '../../components/AboutUs/AboutUs';
 import Testimonials from '../../components/Testimonials/Testimonials';
+import ContactUs from '../../components/ContactUs/ContactUs';
+import BlogSection from '../../components/BlogSection/BlogSection';
 
 class Homepage extends Component {
   render() {
@@ -14,6 +16,8 @@ class Homepage extends Component {
           <ServicesList/>
           <AboutUs/>
           <Testimonials/>
+          <BlogSection/>
+          <ContactUs/>
         </main>
       </div>
     );

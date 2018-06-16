@@ -13,7 +13,7 @@ const subscribeForm = () => (
     <label htmlFor="subscribe-email">Subscribe to our emails</label>
     <input type="text" name="EMAIL" placeholder="Email Address"/>
     <input type="hidden" name="ID" value="07554BFCC3F44A718FA2FD3C0394594E"/>
-    <input type="submit" className="button button-reverse" name="go" value="Subscribe"/>
+    <input type="submit" className="button-reverse" name="go" value="Subscribe"/>
   </form>
 );
 

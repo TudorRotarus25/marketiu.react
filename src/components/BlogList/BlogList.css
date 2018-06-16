@@ -1,0 +1,25 @@
+.Article {
+    display: flex;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.ArticleImage {
+    flex-basis: 50%;
+    padding-right: 1em;
+}
+
+.ArticleImage img {
+    display: block;
+    width: 100%;
+}
+
+.ArticleInfo {
+    flex-basis: 50%;
+    padding-left: 1em;
+    text-align: justify;
+}
+
+.ArticleInfo h4 {
+    margin-top: 0;
+}

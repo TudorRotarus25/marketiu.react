@@ -8,11 +8,24 @@ h1, h2 {
   text-align: center;
 }
 
+h3, h4, h5 {
+  margin: 1em 0;
+}
+
 h2 {
   font-size: 2em;
 }
 
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.1em;
+}
+
 a {
+  /*display: inline-block;*/
   text-decoration: none;
   color: inherit;
 }
@@ -29,21 +42,33 @@ main {
 
 input {
   line-height: 3.2;
-  border: none;
   width: 250px;
   padding: 0 1%;
 }
 
-.button-reverse {
+input[type="text"], textarea {
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  border: none;
+}
+
+:global(.button-reverse) {
   color: #fff;
   background: #8c0010;
 }
 
-button, .button {
+button, :global(.button) {
   padding: 1em;
   border: 1px solid #8c0010;
   background: transparent;
   color: #8c0010;
   transition: 0.2s;
   cursor: pointer;
+}
+
+button:hover, :global(.button:hover) {
+  background-color: #8c0010;
+  color: #fff;
 }

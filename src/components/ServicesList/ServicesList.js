@@ -64,7 +64,7 @@ const servicesList = () => {
               alt={service.title}
             />
             <div className={classes.CardContent}>
-              <h4 className={classes.CardTitle}>{service.title}</h4>
+              <h5 className={classes.CardTitle}>{service.title}</h5>
               <p className={classes.CardDescription}>{service.description}</p>
             </div>
           </div>
