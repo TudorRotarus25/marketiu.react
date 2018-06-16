@@ -24,6 +24,11 @@
     height: 100%;
     margin: 20px;
     box-shadow: 2px 5px 20px #aaa;
+    transition: 0.3s;
+}
+
+.Card:hover {
+    transform: scale(1.05)
 }
 
 .CardContent {

@@ -14,6 +14,9 @@ class Homepage extends Component {
       <div>
         <HeroBannerFullSize image={heroImage}/>
         <main>
+          <p className={classes.IntroText}>
+            Best global brands can only lead, thrive and prosper by developing meaningful relationships with their customers through strong Branding and industry-leading Digital Marketing tools, supported by a unique, bespoke Strategy. We’re here to help you bring all these elements together in a perfectly tailored and optimised system, accelerate your success and Market-You in the most effective and powerful way!
+          </p>
           <ServicesList/>
           <AboutUs/>
           <Testimonials/>

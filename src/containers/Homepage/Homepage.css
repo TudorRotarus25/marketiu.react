@@ -1,3 +1,11 @@
 main > div {
     margin: 70px 0;
 }
+
+.IntroText {
+    max-width: 1000px;
+    margin: 70px auto 0;
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.3;
+}
