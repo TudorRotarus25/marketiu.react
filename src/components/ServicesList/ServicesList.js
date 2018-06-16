@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classes from './ServicesList.css';
-import digitalPpcImage from '../../assets/images/services/digital-ppc.png';
+import digitalPpcImage from '../../assets/images/services/digital-ppc.jpg';
 import emailMarketingImage from '../../assets/images/services/email-marketing.png';
 import marketingStrategyImage from '../../assets/images/services/marketing-strategy.png';
 import photoVideoImage from '../../assets/images/services/photo-video-graphic.png';
@@ -54,7 +54,10 @@ const servicesList = () => {
         key={index}
         className={classes.Service}
       >
-        <Link to={'/services/' + service.link }>
+        <Link
+          to={'/services/' + service.link }
+          className={classes.ServiceLink}
+        >
           <div className={classes.Card}>
             <img
               src={service.image}

@@ -1,7 +1,3 @@
-.ServicesList {
-
-}
-
 .ServicesContainer {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +14,14 @@
     flex-basis: 33.33%;
 }
 
+.ServiceLink {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .Card {
+    height: 100%;
     margin: 20px;
     box-shadow: 2px 5px 20px #aaa;
 }
