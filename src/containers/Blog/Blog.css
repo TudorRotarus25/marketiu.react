@@ -1,0 +1,25 @@
+.HeroBanner img {
+    width: 100%;
+}
+
+.BlogContainer {
+    margin: 50px 0 100px;
+}
+
+.BlogTitle {
+     max-width: 800px;
+     margin: auto;
+     line-height: 1.5;
+ }
+
+.Spacer {
+    width: 200px;
+    height: 1px;
+    background-color: #cccccc;
+    margin: 30px auto 40px;
+}
+
+.BlogContent {
+    max-width: 1000px;
+    margin: auto;
+}

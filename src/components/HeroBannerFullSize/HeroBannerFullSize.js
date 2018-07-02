@@ -18,8 +18,7 @@ const heroBannerFullSize = (props) => (
       <div className={classes.Quote}>
         <Typing>
           <span>
-            Driving Digital Marketing Intelligence & Innovation<br/>
-            Forwarding Digital Marketing Intelligence
+            Driving Digital Marketing Intelligence & Innovation
           </span>
         </Typing>
       </div>

@@ -1,3 +1,14 @@
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .HeroImage {
     position: relative;
     height: 100vh;
@@ -22,15 +33,17 @@
 }
 
 .Logo {
-    padding-top: 60px;
+    padding-top: 35px;
 }
 
 .Logo img {
     width: 235px;
+    opacity: 0;
+    animation: fade-in-right ease 1s forwards;
 }
 
 .Quote {
     font-size: 1.4em;
-    height: 60px;
+    height: 35px;
     line-height: 1.5;
 }

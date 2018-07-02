@@ -33,6 +33,20 @@
 
 .CardContent {
     padding: 20px;
+    text-align: center;
+}
+
+.CardContent p {
+    font-size: 0.8em;
+}
+
+.CardContent .Cta {
+    display: inline-block;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #8c0010;
+    padding: 0.5em 1em;
+    margin: 10px 0;
 }
 
 .CardTitle {

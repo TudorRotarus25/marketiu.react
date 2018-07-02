@@ -66,6 +66,7 @@ const servicesList = () => {
             <div className={classes.CardContent}>
               <h5 className={classes.CardTitle}>{service.title}</h5>
               <p className={classes.CardDescription}>{service.description}</p>
+              <a className={classes.Cta}>Read More</a>
             </div>
           </div>
         </Link>
