@@ -1,0 +1,25 @@
+.PartnersSection {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 0 40px;
+    font-size: 1.2em;
+}
+
+.PartnersList {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.PartnersList .Partner {
+    display: block;
+    flex-basis: 31%;
+    text-align: center;
+    margin: 3% 1%;
+}
+
+.PartnersList .Partner img {
+    max-height: 100px;
+    max-width: 100%;
+}

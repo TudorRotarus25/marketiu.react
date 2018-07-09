@@ -7,6 +7,8 @@ import marketingStrategyImage from '../../assets/images/services/marketing-strat
 import photoVideoImage from '../../assets/images/services/photo-video-graphic.png';
 import socialMediaImage from '../../assets/images/services/social-media.png';
 import webMobileImage from '../../assets/images/services/web-mobile-app.png';
+import Pulse from 'react-reveal/Pulse';
+import Zoom from 'react-reveal/Zoom';
 
 const servicesData = [
   {
@@ -55,7 +57,7 @@ const servicesList = () => {
         className={classes.Service}
       >
         <Link
-          to={'/services/' + service.link }
+          to={'/services/' + service.link}
           className={classes.ServiceLink}
         >
           <div className={classes.Card}>
@@ -78,7 +80,9 @@ const servicesList = () => {
     <div className={classes.ServicesList}>
       <h2>Services</h2>
       <div className={classes.ServicesContainer}>
-        {services}
+        <Pulse>
+          {services}
+        </Pulse>
       </div>
     </div>
   )

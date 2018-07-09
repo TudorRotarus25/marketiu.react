@@ -5,6 +5,7 @@ import HeroBannerFullSize from '../../components/HeroBannerFullSize/HeroBannerFu
 import ServicesList from '../../components/ServicesList/ServicesList';
 import AboutUs from '../../components/AboutUs/AboutUs';
 import Testimonials from '../../components/Testimonials/Testimonials';
+import PartnersSection from '../../components/PartnersSection/PartnersSection';
 import ContactUs from '../../components/ContactUs/ContactUs';
 import BlogSection from '../../components/BlogSection/BlogSection';
 
@@ -22,6 +23,7 @@ class Homepage extends Component {
           <Testimonials/>
           <BlogSection/>
           <ContactUs/>
+          <PartnersSection/>
         </main>
       </div>
     );
