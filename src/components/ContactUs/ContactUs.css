@@ -13,8 +13,22 @@
     text-align: center;
 }
 
+@media screen and (max-width: 768px) {
+    .DirectContact {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+}
+
 .DirectContact div {
     padding: 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .DirectContact div {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
 }
 
 .DirectContact i {

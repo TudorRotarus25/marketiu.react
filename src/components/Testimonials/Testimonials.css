@@ -12,10 +12,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 350px;
+    height: 400px;
     margin: 20px;
     padding: 20px;
     box-shadow: 2px 5px 20px #aaa;
+}
+
+@media screen and (max-width: 500px) {
+    .TestimonialContent {
+        margin: 20px 10px;
+    }
 }
 
 .ImageContainer {

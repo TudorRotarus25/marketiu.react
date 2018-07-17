@@ -1,7 +1,6 @@
 import React from 'react';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Social_media_Marketing_Inline_2.png';
-import image2 from '../../../assets/images/servicesContent/Social_Media_Viral_inline.png';
 import image3 from '../../../assets/images/servicesContent/Social_Media_Influencer_Inline.png';
 
 const socialMedia = () => (
@@ -23,18 +22,11 @@ const socialMedia = () => (
         <img src={image1} alt=""/>
       </div>
     </div>
-    <div className="row">
-      <div className="column">
-        <p>
-          We have also obtained results much over the industry average for our clients implementing and managing Paid
-          Advertising campaigns on Facebook, Instagram, Youtube and LinkedIn, which are essential today for engaging
-          with new potential customers in a targeted way and generating new leads.
-        </p>
-      </div>
-      <div className="column">
-        <img src={image2} alt=""/>
-      </div>
-    </div>
+    <p>
+      We have also obtained results much over the industry average for our clients implementing and managing Paid
+      Advertising campaigns on Facebook, Instagram, Youtube and LinkedIn, which are essential today for engaging
+      with new potential customers in a targeted way and generating new leads.
+    </p>
     <p>
       It’s your time to be heard!
     </p>

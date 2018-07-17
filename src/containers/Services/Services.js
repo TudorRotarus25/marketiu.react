@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Services.css';
 import marketingConsultancyImage from '../../assets/images/banners/marketing-consultancy.jpg';
 import socialMediaImage from '../../assets/images/banners/social-media.jpg';
@@ -14,6 +15,10 @@ import MediaProduction from '../../components/services/MediaProduction/MediaProd
 import EmailMarketingAutomation from '../../components/services/EmailMarketingAutomation/EmailMarketingAutomation';
 
 class Services extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   getServiceData = (service) => {
     switch (service) {
       case 'marketing-consultancy':
@@ -71,6 +76,17 @@ class Services extends Component {
             <h2>{serviceData.title}</h2>
             <div className="spacer"/>
             {serviceData.body}
+            <div className={classes.CtaContainer}>
+              <Link
+                to={{
+                  pathname: '/',
+                  search: 'target=contact'
+                }}
+                className="button"
+              >
+                Get in Touch
+              </Link>
+            </div>
           </div>
         </main>
       </div>

@@ -12,6 +12,12 @@
     height: 105px;
 }
 
+@media screen and (max-width: 768px) {
+    .LogoContainer {
+        height: 70px;
+    }
+}
+
 .NavigationMenu {
     display: flex;
     align-items: center;

@@ -10,7 +10,27 @@ class SimpleCarousel extends Component {
       autoplay: true,
       speed: 500,
       slidesToShow: 3,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1300,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 1000,
+          settings: {
+            slidesToShow: 1.5,
+          },
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
     };
 
     return (

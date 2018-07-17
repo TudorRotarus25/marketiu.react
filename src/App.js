@@ -6,7 +6,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
+        <BrowserRouter
+          forceRefresh={true}
+        >
           <Layout/>
         </BrowserRouter>
       </div>

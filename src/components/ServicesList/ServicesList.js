@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classes from './ServicesList.css';
 import digitalPpcImage from '../../assets/images/services/digital-ppc.jpg';
@@ -8,7 +8,6 @@ import photoVideoImage from '../../assets/images/services/photo-video-graphic.pn
 import socialMediaImage from '../../assets/images/services/social-media.png';
 import webMobileImage from '../../assets/images/services/web-mobile-app.png';
 import Pulse from 'react-reveal/Pulse';
-import Zoom from 'react-reveal/Zoom';
 
 const servicesData = [
   {
@@ -49,43 +48,45 @@ const servicesData = [
   },
 ];
 
-const servicesList = () => {
-  const services = servicesData.map((service, index) => {
-    return (
-      <div
-        key={index}
-        className={classes.Service}
-      >
-        <Link
-          to={'/services/' + service.link}
-          className={classes.ServiceLink}
+class ServicesList extends Component {
+  render() {
+    const services = servicesData.map((service, index) => {
+      return (
+        <div
+          key={index}
+          className={classes.Service}
         >
-          <div className={classes.Card}>
-            <img
-              src={service.image}
-              alt={service.title}
-            />
-            <div className={classes.CardContent}>
-              <h5 className={classes.CardTitle}>{service.title}</h5>
-              <p className={classes.CardDescription}>{service.description}</p>
-              <a className={classes.Cta}>Read More</a>
+          <Link
+            to={'/services/' + service.link}
+            className={classes.ServiceLink}
+          >
+            <div className={classes.Card}>
+              <img
+                src={service.image}
+                alt={service.title}
+              />
+              <div className={classes.CardContent}>
+                <h5 className={classes.CardTitle}>{service.title}</h5>
+                <p className={classes.CardDescription}>{service.description}</p>
+                <span className={classes.Cta}>Read More</span>
+              </div>
             </div>
-          </div>
-        </Link>
-      </div>
-    )
-  });
+          </Link>
+        </div>
+      )
+    });
 
-  return (
-    <div className={classes.ServicesList}>
-      <h2>Services</h2>
-      <div className={classes.ServicesContainer}>
-        <Pulse>
-          {services}
-        </Pulse>
+    return (
+      <div className={classes.ServicesList}>
+        <h2>Services</h2>
+        <div className={classes.ServicesContainer}>
+          <Pulse>
+            {services}
+          </Pulse>
+        </div>
       </div>
-    </div>
-  )
-};
+    );
+  }
+}
 
-export default servicesList;
+export default ServicesList;

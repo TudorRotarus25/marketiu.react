@@ -7,10 +7,10 @@ import Homepage from '../../../containers/Homepage/Homepage';
 
 const routes = () => (
   <Switch>
+    <Route exact path="/" component={Homepage}/>
     <Route path="/blog/:articleIdentifier" component={BlogArticle}/>
     <Route path="/blog" component={Blog}/>
     <Route path="/services/:service" component={Services}/>
-    <Route path="/" component={Homepage}/>
   </Switch>
 );
 

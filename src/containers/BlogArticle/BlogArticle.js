@@ -9,7 +9,13 @@ class BlogArticle extends Component {
     article: {},
   };
 
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   componentDidMount() {
+    this.scrollToTop();
+
     const articleIdentifier = this.props.match && this.props.match.params
       ? this.props.match.params.articleIdentifier : null;
     axios.get(`blog/${articleIdentifier}`).then((response) => {

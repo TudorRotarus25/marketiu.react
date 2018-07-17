@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import classes from './AboutUs.css';
 
 const aboutUsData = [
@@ -28,21 +28,23 @@ const aboutUsData = [
   'excited to jump in and start together a rewarding and impactful journey for your brand.',
 ];
 
-const aboutUs = () => {
-  const aboutUsParagraphs = aboutUsData.map((text, index) => (
-    <p key={index}>
-      {text}
-    </p>
-  ));
+class AboutUs extends Component {
+  render() {
+    const aboutUsParagraphs = aboutUsData.map((text, index) => (
+      <p key={index}>
+        {text}
+      </p>
+    ));
 
-  return (
-    <div className={classes.AboutUs}>
-      <h2>About us</h2>
-      <div className={classes.AboutUsContent}>
-        {aboutUsParagraphs}
+    return (
+      <div className={classes.AboutUs}>
+        <h2>About us</h2>
+        <div className={classes.AboutUsContent}>
+          {aboutUsParagraphs}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default aboutUs;
+export default AboutUs;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import classes from './TopNavigation.css';
 import Logo from '../../Logo/Logo';
 
@@ -10,46 +10,61 @@ const topNavigation = () => (
     </div>
     <ul className={classes.NavigationMenu}>
       <li>
-        <NavLink
+        <Link
           to="/"
         >
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/"
+        <Link
+          to={{
+            pathname: '/',
+            search: 'target=services'
+          }}
         >
           Services
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/"
+        <Link
+          to={{
+            pathname: '/',
+            search: 'target=clients'
+          }}
         >
           Clients
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/"
+        <Link
+          to={{
+            pathname: '/',
+            search: 'target=blog'
+          }}
         >
           Blog
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/"
+        <Link
+          to={{
+            pathname: '/',
+            search: 'target=about'
+          }}
         >
           About Us
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink
-          to="/"
+        <Link
+          to={{
+            pathname: '/',
+            search: 'target=contact'
+          }}
         >
           Contact
-        </NavLink>
+        </Link>
       </li>
     </ul>
   </div>
