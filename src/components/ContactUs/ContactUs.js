@@ -5,7 +5,10 @@ import SocialMediaButtons from '../SocialMediaButtons/SocialMediaButtons';
 class ContactUs extends Component {
   render() {
     return (
-      <div className={classes.ContactUs}>
+      <div
+        ref={this.props.scrollRef}
+        className={classes.ContactUs}
+      >
         <h2>Contact</h2>
         <div className={classes.ContactUsContent}>
           <p>We’re here to help. Let us know your questions, and be sure you’re in safe hands</p>

@@ -17,16 +17,16 @@ const socialMedia = () => (
           relevant content strategies and calendars, while using industry-leading tools to help you schedule and
           optimise posts for best performing times.
         </p>
+        <p>
+          We have also obtained results much over the industry average for our clients implementing and managing Paid
+          Advertising campaigns on Facebook, Instagram, Youtube and LinkedIn, which are essential today for engaging
+          with new potential customers in a targeted way and generating new leads.
+        </p>
       </div>
       <div className="column">
         <img src={image1} alt=""/>
       </div>
     </div>
-    <p>
-      We have also obtained results much over the industry average for our clients implementing and managing Paid
-      Advertising campaigns on Facebook, Instagram, Youtube and LinkedIn, which are essential today for engaging
-      with new potential customers in a targeted way and generating new leads.
-    </p>
     <p>
       It’s your time to be heard!
     </p>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import scrollToComponent from 'react-scroll-to-component';
 import classes from './Homepage.css';
 import heroImage from '../../assets/images/banners/Home1.jpg';
 import HeroBannerFullSize from '../../components/HeroBannerFullSize/HeroBannerFullSize';
@@ -11,36 +10,67 @@ import ContactUs from '../../components/ContactUs/ContactUs';
 import BlogSection from '../../components/BlogSection/BlogSection';
 
 class Homepage extends Component {
-  componentDidMount() {
-    window.scrollTo(0, 0);
+  constructor(props) {
+    super(props);
 
+    this.servicesRef = React.createRef();
+    this.clientsRef = React.createRef();
+    this.aboutRef = React.createRef();
+    this.blogRef = React.createRef();
+    this.contactRef = React.createRef();
+  }
+
+  componentDidMount() {
     const searchParams = new URLSearchParams(this.props.location.search);
     const target = searchParams.get('target');
 
     const scrollParameters = {
       offset: -50,
-      align: 'top',
-      duration: 500,
     };
 
     switch (target) {
       case 'services':
-        scrollToComponent(this.refs.services, scrollParameters);
+        window.scroll({
+          top: this.servicesRef.current.offsetTop + scrollParameters.offset,
+          left: 0,
+          behavior: 'smooth'
+        });
         break;
       case 'clients':
-        scrollToComponent(this.refs.clients, scrollParameters);
+        window.scroll({
+          top: this.clientsRef.current.offsetTop + scrollParameters.offset,
+          left: 0,
+          behavior: 'smooth'
+        });
         break;
       case 'about':
-        scrollToComponent(this.refs.about, scrollParameters);
+        window.scroll({
+          top: this.aboutRef.current.offsetTop + scrollParameters.offset,
+          left: 0,
+          behavior: 'smooth'
+        });
         break;
       case 'blog':
-        scrollToComponent(this.refs.blog, scrollParameters);
+        window.scroll({
+          top: this.blogRef.current.offsetTop + scrollParameters.offset,
+          left: 0,
+          behavior: 'smooth'
+        });
         break;
       case 'contact':
-        scrollToComponent(this.refs.contact, scrollParameters);
+        console.log(this.contactRef.current.offsetTop + 200);
+        window.scroll({
+          top: this.contactRef.current.offsetTop + scrollParameters.offset + 200,
+          left: 0,
+          behavior: 'smooth'
+        });
         break;
       default:
-        window.scrollTo(0, 0);
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
     }
   }
 
@@ -55,11 +85,11 @@ class Homepage extends Component {
             bespoke Strategy. We’re here to help you bring all these elements together in a perfectly tailored and
             optimised system, accelerate your success and Market-You in the most effective and powerful way!
           </p>
-          <ServicesList ref="services"/>
-          <AboutUs ref="about"/>
-          <Testimonials ref="clients"/>
-          <BlogSection ref="blog"/>
-          <ContactUs ref="contact"/>
+          <ServicesList scrollRef={this.servicesRef}/>
+          <AboutUs scrollRef={this.aboutRef}/>
+          <Testimonials scrollRef={this.clientsRef}/>
+          <BlogSection scrollRef={this.blogRef}/>
+          <ContactUs scrollRef={this.contactRef}/>
           <PartnersSection/>
         </main>
       </div>

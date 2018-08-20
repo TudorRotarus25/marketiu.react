@@ -7,7 +7,6 @@ import marketingStrategyImage from '../../assets/images/services/marketing-strat
 import photoVideoImage from '../../assets/images/services/photo-video-graphic.png';
 import socialMediaImage from '../../assets/images/services/social-media.png';
 import webMobileImage from '../../assets/images/services/web-mobile-app.png';
-import Pulse from 'react-reveal/Pulse';
 
 const servicesData = [
   {
@@ -66,9 +65,15 @@ class ServicesList extends Component {
                 alt={service.title}
               />
               <div className={classes.CardContent}>
-                <h5 className={classes.CardTitle}>{service.title}</h5>
-                <p className={classes.CardDescription}>{service.description}</p>
-                <span className={classes.Cta}>Read More</span>
+                <div>
+                  <h5 className={classes.CardTitle}>{service.title}</h5>
+                  <p className={classes.CardDescription}>
+                    {service.description}
+                  </p>
+                </div>
+                <div>
+                  <span className={classes.Cta}>Read More</span>
+                </div>
               </div>
             </div>
           </Link>
@@ -77,12 +82,13 @@ class ServicesList extends Component {
     });
 
     return (
-      <div className={classes.ServicesList}>
+      <div
+        ref={this.props.scrollRef}
+        className={classes.ServicesList}
+      >
         <h2>Services</h2>
         <div className={classes.ServicesContainer}>
-          <Pulse>
-            {services}
-          </Pulse>
+          {services}
         </div>
       </div>
     );

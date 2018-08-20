@@ -37,7 +37,10 @@ class AboutUs extends Component {
     ));
 
     return (
-      <div className={classes.AboutUs}>
+      <div
+        ref={this.props.scrollRef}
+        className={classes.AboutUs}
+      >
         <h2>About us</h2>
         <div className={classes.AboutUsContent}>
           {aboutUsParagraphs}

@@ -24,21 +24,14 @@ const marketingConsultancy = () => (
         <img src={image1} alt=""/>
       </div>
     </div>
-    <div className="row">
-      <div className="column">
-        <p>
-          Not entirely sure how you want to go about your branding, market positioning, integrated marketing strategy or
-          growing your online presence?
-        </p>
-        <p>
-          Get in touch for a free audit and let's work
-          together towards turning you into an online "rockstar"!
-        </p>
-      </div>
-      <div className="column">
-        <img src={image2} alt=""/>
-      </div>
-    </div>
+    <p>
+      Not entirely sure how you want to go about your branding, market positioning, integrated marketing strategy or
+      growing your online presence?
+    </p>
+    <p>
+      Get in touch for a free audit and let's work
+      together towards turning you into an online "rockstar"!
+    </p>
   </Aux>
 );
 

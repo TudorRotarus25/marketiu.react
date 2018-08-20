@@ -22,26 +22,26 @@ const mediaProduction = () => (
           relationship they have great turnaround times and
           are highly flexible, able to accommodate even the harshest or most innovative briefs and ideas!
         </p>
+        <p>
+          Our previous projects together include: Corporate Videos, Interviews, Commercial Brand Ads, Product and Training
+          Videos, Music Videos, Studio Music Videos, Live Music Session Recordings, Event Videos, Live Concert Recordings
+          and even Short Films!
+        </p>
       </div>
       <div className="column">
         <img src={image1} alt=""/>
       </div>
     </div>
     <p>
-      Our previous projects together include: Corporate Videos, Interviews, Commercial Brand Ads, Product and Training
-      Videos, Music Videos, Studio Music Videos, Live Music Session Recordings, Event Videos, Live Concert Recordings
-      and even Short Films!
-    </p>
-    <p>
       Curious to find out more? Give us a shout and let’s roll this out!
     </p>
     <h4>Graphic, Logo & HTML Design</h4>
-    <p>
-      The quality of your Marketing Materials is a direct representation of the expected quality of work for your
-      clients.
-    </p>
     <div className="row">
       <div className="column">
+        <p>
+          The quality of your Marketing Materials is a direct representation of the expected quality of work for your
+          clients.
+        </p>
         <p>
           At Marketiu, we make sure you are delivered the best possible standard of Design Services on the market at the
           best price, with bespoke packages to fit both your needs and budget, so you can make an impression with every
@@ -60,11 +60,11 @@ const mediaProduction = () => (
       reality!
     </p>
     <h4>Photography Services</h4>
-    <p>
-      “A photograph says a thousand words” they say - and it certainly does when considering branding!
-    </p>
     <div className="row">
       <div className="column">
+        <p>
+          “A photograph says a thousand words” they say - and it certainly does when considering branding!
+        </p>
         <p>
           Our team of professional photographers can help you obtain the brand image you always aspired to - reach out
           and let us know more about you, your product and your desired outcome.

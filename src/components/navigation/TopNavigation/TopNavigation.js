@@ -30,6 +30,16 @@ const topNavigation = () => (
         <Link
           to={{
             pathname: '/',
+            search: 'target=about'
+          }}
+        >
+          About Us
+        </Link>
+      </li>
+      <li>
+        <Link
+          to={{
+            pathname: '/',
             search: 'target=clients'
           }}
         >
@@ -44,16 +54,6 @@ const topNavigation = () => (
           }}
         >
           Blog
-        </Link>
-      </li>
-      <li>
-        <Link
-          to={{
-            pathname: '/',
-            search: 'target=about'
-          }}
-        >
-          About Us
         </Link>
       </li>
       <li>

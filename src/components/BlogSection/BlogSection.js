@@ -6,7 +6,10 @@ import BlogList from '../BlogList/BlogList';
 class BlogSection extends Component {
   render() {
     return (
-      <div className={classes.BlogSection}>
+      <div
+        ref={this.props.scrollRef}
+        className={classes.BlogSection}
+      >
         <h2>Blog</h2>
         <div className={classes.BlogSectionContent}>
           <BlogList/>

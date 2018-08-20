@@ -33,6 +33,8 @@
 }
 
 .Card {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     margin: 20px;
     box-shadow: 2px 5px 20px #aaa;
@@ -51,6 +53,10 @@
 }
 
 .CardContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 5;
     padding: 20px;
     text-align: center;
 }

@@ -4,13 +4,13 @@ import image1 from '../../../assets/images/servicesContent/Email_Marketing_Autom
 
 const emailMarketingAutomation = () => (
   <Aux>
-    <p>
-      The future of Digital Marketing lies in the ability of fully understanding your individual customers and designing
-      bespoke messages delivered through the right channel, at the right time, enhancing the dialogue and relationship
-      with every interaction.
-    </p>
     <div className="row">
       <div className="column">
+        <p>
+          The future of Digital Marketing lies in the ability of fully understanding your individual customers and designing
+          bespoke messages delivered through the right channel, at the right time, enhancing the dialogue and relationship
+          with every interaction.
+        </p>
         <p>
           From Automated Email Marketing Programs Implementation to Strategy building for Ad-hoc / Promotional Email
           campaigns, we have helped international brands over the past three years massively increase their revenue,

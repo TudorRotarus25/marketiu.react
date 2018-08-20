@@ -41,7 +41,10 @@ class Testimonials extends Component {
     });
 
     return (
-      <div className={classes.Testimonials}>
+      <div
+        ref={this.props.scrollRef}
+        className={classes.Testimonials}
+      >
         <h2>Clients</h2>
         <SimpleCarousel>
           {testimonialsContent}
