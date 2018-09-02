@@ -1,12 +1,12 @@
+.FooterNavigation li {
+  display: inline-block;
+  margin: 0 1em;
+}
+
 @media screen and (max-width: 1000px) {
   .FooterNavigation {
     display: none;
   }
-}
-
-.FooterNavigation li {
-  display: inline-block;
-  margin: 0 1em;
 }
 
 .FooterNavigation li a {

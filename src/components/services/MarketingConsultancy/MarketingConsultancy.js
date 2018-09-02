@@ -1,7 +1,6 @@
 import React from 'react';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Marketing_Strategy_Consulting_in1.png';
-import image2 from '../../../assets/images/servicesContent/Marketing_Strategy_in2.png';
 
 const marketingConsultancy = () => (
   <Aux>
