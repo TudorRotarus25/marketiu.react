@@ -1,12 +1,12 @@
 .Footer {
-    text-align: center;
-    background: #171717;
-    color: #fff;
+  text-align: center;
+  background: #171717;
+  color: #fff;
 }
 
 .Logo {
-    height: 105.5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  height: 105.5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

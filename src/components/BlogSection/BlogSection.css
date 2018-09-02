@@ -1,9 +1,10 @@
-.BlogSection {
-
+.BlogSectionContent {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
-.BlogSectionContent {
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
+.AllArticlesButton {
+  display: inline-block;
+  margin-top: 20px;
 }

@@ -1,44 +1,117 @@
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .TopNavigation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
 }
 
 .LogoContainer {
-    height: 105px;
+  height: 105px;
 }
 
 @media screen and (max-width: 768px) {
-    .LogoContainer {
-        height: 70px;
-    }
+  .LogoContainer {
+    height: 70px;
+  }
 }
 
 .NavigationMenu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    padding: 0 10px;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 10px;
 }
 
 @media (max-width: 1000px) {
-    .NavigationMenu {
-        display: none;
-    }
+  .NavigationMenu {
+    display: none;
+  }
 }
 
 .NavigationMenu li {
-    box-sizing: border-box;
-    padding: 0 20px;
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
 .NavigationMenu li a {
-    text-decoration: none;
-    font-size: 19px;
-    color: #fff;
-    text-shadow: 0px 0px 7px #000;
+  text-decoration: none;
+  font-size: 19px;
+  color: #fff;
+  text-shadow: 0 0 7px #000;
+}
+
+.Backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.HamburgerMenu {
+  display: none;
+  position: relative;
+}
+
+@media screen and (max-width: 1000px) {
+  .HamburgerMenu {
+    display: block;
+  }
+}
+
+.HamburgerMenu i {
+  color: #fff;
+  font-size: 25px;
+  line-height: 105px;
+  padding: 0 1em 0 0.5em;
+}
+
+@media screen and (max-width: 768px) {
+  .HamburgerMenu i {
+    line-height: 70px;
+  }
+}
+
+.HamburgerMenu.open i {
+  color: inherit;
+}
+
+.NavigationMobileMenu {
+  display: none;
+  opacity: 0;
+  background-color: #fff;
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+}
+
+.HamburgerMenu.open .NavigationMobileMenu {
+  display: block;
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+}
+
+.NavigationMobileMenu li {
+  text-align: center;
+  padding: 0.3em 0;
 }

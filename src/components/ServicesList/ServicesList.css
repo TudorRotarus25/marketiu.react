@@ -1,84 +1,84 @@
 .ServicesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 1320px;
-    margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1320px;
+  margin: auto;
 }
 
 .ServicesContainer img {
-    width: 100%;
+  width: 100%;
 }
 
 .Service {
-    flex-basis: 33.33%;
+  flex-basis: 33.33%;
 }
 
 @media (max-width: 1000px) {
-    .Service {
-        flex-basis: 50%;
-    }
+  .Service {
+    flex-basis: 50%;
+  }
 }
 
 @media (max-width: 600px) {
-    .Service {
-        flex-basis: 100%;
-    }
+  .Service {
+    flex-basis: 100%;
+  }
 }
 
 .ServiceLink {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .Card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 20px;
-    box-shadow: 2px 5px 20px #aaa;
-    transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 20px;
+  box-shadow: 2px 5px 20px #aaa;
+  transition: 0.3s;
 }
 
 @media (max-width: 600px) {
-    .Card {
-        margin-left: 0;
-        margin-right: 0;
-    }
+  .Card {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .Card:hover {
-    transform: scale(1.05)
+  transform: scale(1.05)
 }
 
 .CardContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 5;
-    padding: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 5;
+  padding: 20px;
+  text-align: center;
 }
 
 .CardContent p {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .CardContent .Cta {
-    display: inline-block;
-    font-size: 0.9em;
-    color: #fff;
-    background-color: #8c0010;
-    padding: 0.5em 1em;
-    margin: 10px 0;
+  display: inline-block;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #8c0010;
+  padding: 0.5em 1em;
+  margin: 10px 0;
 }
 
 .CardTitle {
-    text-align: center;
-    margin-top: 10px;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .CardDescription {
-    text-align: center;
+  text-align: center;
 }

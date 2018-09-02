@@ -12,10 +12,10 @@ class BlogSection extends Component {
       >
         <h2>Blog</h2>
         <div className={classes.BlogSectionContent}>
-          <BlogList/>
+          <BlogList limit={3}/>
           <Link
             to="/blog"
-            className="button"
+            className={classes.AllArticlesButton + ' button'}
           >
             See All Articles
           </Link>

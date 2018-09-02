@@ -8,6 +8,7 @@ class SimpleCarousel extends Component {
       arrows: true,
       infinite: true,
       autoplay: true,
+      pauseOnHover: true,
       speed: 500,
       slidesToShow: 3,
       slidesToScroll: 1,

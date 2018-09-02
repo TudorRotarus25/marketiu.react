@@ -1,56 +1,62 @@
 @keyframes fade-in-right {
-    from {
-        opacity: 0;
-        transform: translateX(-50vw);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-50vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .HeroImage {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background: no-repeat center center;
-    background-size: auto 100%;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: no-repeat center center;
+  background-size: auto 100%;
 }
 
 .Backdrop {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(9, 9, 9, 0.5);
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(9, 9, 9, 0.5);
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .Logo {
-    padding-top: 35px;
+  padding-top: 35px;
 }
 
 .Logo img {
-    width: 235px;
-    opacity: 0;
-    animation: fade-in-right ease 0.5s forwards;
+  width: 235px;
+  opacity: 0;
+  animation: fade-in-right ease 0.5s forwards;
 }
 
 @media screen and (max-width: 768px) {
-    .Logo img {
-        width: 150px;
-    }
+  .Logo img {
+    width: 150px;
+  }
 }
 
 .Quote {
-    font-size: 1.4em;
-    height: 35px;
-    line-height: 1.5;
-    padding: 0 10px;
+  font-size: 1.4em;
+  height: 35px;
+  line-height: 1.5;
+  padding: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .Quote {
+    max-width: 200px;
+  }
 }

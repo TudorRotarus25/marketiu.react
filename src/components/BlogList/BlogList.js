@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './BlogList.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import ImagesUtil from '../../utils/ImagesUtil';
 
 class BlogList extends Component {
   state = {
@@ -9,9 +10,17 @@ class BlogList extends Component {
   };
 
   componentDidMount() {
-    axios.get('blog/?limit=3').then((response) => {
+    const path = `blog/${this.props.limit ? `?limit=${this.props.limit}` : ''}`;
+
+    axios.get(path).then((response) => {
+      const articles = response.data.map((article) => ({
+        ...article,
+        image: ImagesUtil.getImageBaseUrl() + article.image,
+      }));
+
       this.setState({
-        articles: response.data,
+        ...this.state,
+        articles,
       });
     })
   }

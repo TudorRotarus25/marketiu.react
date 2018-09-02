@@ -1,29 +1,45 @@
 .HeroBanner img {
-    width: 100%;
+  width: 100%;
 }
 
 .ArticleContainer {
-    max-width: 1000px;
-    margin: 50px auto;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 1em;
 }
 
 .ArticleTitle {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .ArticleTitle h2 {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.5;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.5;
 }
 
-.ArticleTitle .Spacer {
-    width: 200px;
-    height: 1px;
-    background-color: #cccccc;
-    margin: 30px auto 40px;
+.Spacer {
+  width: 200px;
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px auto 40px;
 }
 
 .ArticleBody p {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.ArticleBody img {
+  display: block;
+  width: 100%;
+}
+
+.SocialMedia {
+  padding: 2rem;
+  text-align: center;
+}
+
+.SocialMedia h3 {
+  margin: 0;
 }

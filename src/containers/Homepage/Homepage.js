@@ -20,57 +20,52 @@ class Homepage extends Component {
     this.contactRef = React.createRef();
   }
 
-  componentDidMount() {
-    const searchParams = new URLSearchParams(this.props.location.search);
-    const target = searchParams.get('target');
-
+  scrollToSection = (target) => {
     const scrollParameters = {
       offset: -50,
     };
+    let topElement = null;
 
     switch (target) {
       case 'services':
-        window.scroll({
-          top: this.servicesRef.current.offsetTop + scrollParameters.offset,
-          left: 0,
-          behavior: 'smooth'
-        });
+        topElement = this.servicesRef.current;
         break;
       case 'clients':
-        window.scroll({
-          top: this.clientsRef.current.offsetTop + scrollParameters.offset,
-          left: 0,
-          behavior: 'smooth'
-        });
+        topElement = this.clientsRef.current;
         break;
       case 'about':
-        window.scroll({
-          top: this.aboutRef.current.offsetTop + scrollParameters.offset,
-          left: 0,
-          behavior: 'smooth'
-        });
+        topElement = this.aboutRef.current;
         break;
       case 'blog':
-        window.scroll({
-          top: this.blogRef.current.offsetTop + scrollParameters.offset,
-          left: 0,
-          behavior: 'smooth'
-        });
+        topElement = this.blogRef.current;
         break;
       case 'contact':
-        console.log(this.contactRef.current.offsetTop + 200);
-        window.scroll({
-          top: this.contactRef.current.offsetTop + scrollParameters.offset + 200,
-          left: 0,
-          behavior: 'smooth'
-        });
+        topElement = this.contactRef.current;
         break;
       default:
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
+        return;
+    }
+
+    const top = topElement.offsetTop - topElement.scrollTop + topElement.clientTop;
+
+    window.scroll({
+      top: top ?  top + scrollParameters.offset : 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  componentDidMount() {
+    setTimeout(() => {
+      const searchParams = new URLSearchParams(this.props.location.search);
+      this.scrollToSection(searchParams.get('target'));
+    }, 500);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.location) {
+      const searchParams = new URLSearchParams(nextProps.location.search);
+      this.scrollToSection(searchParams.get('target'));
     }
   }
 

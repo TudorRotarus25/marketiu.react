@@ -1,23 +1,23 @@
 .HeroBanner img {
-    width: 100%;
+  width: 100%;
 }
 
 .ServicesBody {
-    max-width: 1000px;
-    margin: auto;
-    text-align: justify;
-    font-size: 1.2em;
+  max-width: 1000px;
+  margin: auto;
+  text-align: justify;
+  font-size: 1.2em;
 }
 
 .ServicesBody img {
-    width: 400px;
+  width: 400px;
 }
 
 .ServicesBody h4 {
-    margin-top: 70px;
+  margin-top: 70px;
 }
 
 .CtaContainer {
-    text-align: center;
-    padding: 20px 0;
+  text-align: center;
+  padding: 20px 0;
 }

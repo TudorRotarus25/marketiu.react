@@ -74,6 +74,7 @@ button, :global(.button) {
   color: #8c0010;
   transition: 0.2s;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 
 button:hover, :global(.button:hover) {

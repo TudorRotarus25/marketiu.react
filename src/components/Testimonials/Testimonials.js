@@ -2,15 +2,40 @@ import React, { Component } from 'react';
 import classes from './Testimonials.css';
 import SimpleCarousel from '../SimpleCarousel/SimpleCarousel';
 import axios from 'axios';
+import ImagesUtil from '../../utils/ImagesUtil';
 
 class Testimonials extends Component {
   state = {
     testimonials: [],
   };
 
+  setSlidesHeight = () => {
+    let maxHeight = 0;
+    const slides = document.querySelectorAll('.slick-slide');
+
+    slides.forEach((slide) => {
+      maxHeight = Math.max(maxHeight, slide.querySelector('.testimonial-text').clientHeight);
+    });
+
+    slides.forEach((slide) => {
+      slide.querySelector('.testimonial-slide').style.height = `${maxHeight + 210}px`;
+    });
+  };
+
   componentDidMount() {
     axios.get('testimonials/').then((response) => {
-      this.setState({testimonials: response.data})
+      const testimonials = response.data.map((testimonial) => ({
+        ...testimonial,
+        image: ImagesUtil.getImageBaseUrl() + testimonial.image,
+      }));
+
+      this.setState({
+        ...this.state,
+        testimonials,
+      });
+
+      this.setSlidesHeight();
+      window.onresize = () => this.setSlidesHeight();
     });
   }
 
@@ -22,7 +47,7 @@ class Testimonials extends Component {
           data-index={testimonial.id}
           className={classes.Testimonial}
         >
-          <div className={classes.TestimonialContent}>
+          <div className={`${classes.TestimonialContent} testimonial-slide`}>
             <div className={classes.ImageContainer}>
               <img src={testimonial.image} alt={testimonial.clientName}/>
             </div>
@@ -31,7 +56,7 @@ class Testimonials extends Component {
                 <h3>{testimonial.clientName}</h3>
                 <p>{testimonial.clientDescription}</p>
               </div>
-              <div className={classes.ClientTestimonial}>
+              <div className={`${classes.ClientTestimonial} testimonial-text`}>
                 {testimonial.testimonial}
               </div>
             </div>

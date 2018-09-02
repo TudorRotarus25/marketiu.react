@@ -1,19 +1,19 @@
 .SocialMediaButtons {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .SocialMediaButtons li {
-    display: inline-block;
-    margin: 0 1.5em;
+  display: inline-block;
+  margin: 0 1.5em;
 }
 
 .SocialMediaButtons li a {
-    font-size: 3em;
-    transition: 0.2s;
+  font-size: 3em;
+  transition: 0.2s;
 }
 
 @media screen and (max-width: 1000px) {
-    .SocialMediaButtons li a {
-        font-size: 2em;
-    }
+  .SocialMediaButtons li a {
+    font-size: 2em;
+  }
 }
