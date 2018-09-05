@@ -1,9 +1,14 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Email_Marketing_Automation_Inline.jpg';
 
 const emailMarketingAutomation = () => (
   <Aux>
+    <Helmet>
+      <title>Marketiu | Email, CRM & Marketing Automation</title>
+      <meta name="description" content="The future of Digital Marketing lies in the ability of fully understanding your individual customers and designing bespoke messages delivered through the right channel, at the right time, enhancing the dialogue and relationship with every interaction. Find out how this can boost your Marketing results, bring in customers and decrease your Budget spend."/>
+    </Helmet>
     <div className="row">
       <div className="column">
         <p>

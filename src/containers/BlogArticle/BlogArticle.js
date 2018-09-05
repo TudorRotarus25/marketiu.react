@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import Helmet from 'react-helmet';
 import axios from 'axios';
 import classes from './BlogArticle.css';
-import { Parser } from 'html-to-react';
+import {Parser} from 'html-to-react';
 import ImagesUtil from '../../utils/ImagesUtil';
-import SocialMediaButtons from '../../components/SocialMediaButtons/SocialMediaButtons';
 import {Link} from 'react-router-dom';
-
 
 class BlogArticle extends Component {
   state = {
@@ -38,28 +37,40 @@ class BlogArticle extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>{'Marketiu | ' + this.state.article.title}</title>
+          <meta name="description" content={this.state.article.description}/>
+          <meta name="og:image" content={this.state.article.image}/>
+        </Helmet>
         <div className={classes.HeroBanner}>
           <img src={this.state.article.image} alt={this.state.article.identifier}/>
         </div>
         <div className={classes.ArticleContainer}>
           <div className={classes.ArticleTitle}>
-            <h2>{this.state.article.title}</h2>
+            <h1>{this.state.article.title}</h1>
             <div className={classes.Spacer}/>
           </div>
           <div className={classes.ArticleBody}>
             {new Parser().parse(this.state.article.content)}
           </div>
-          <div className={classes.SocialMedia}>
+          <nav className={classes.ArticleFooterNavigation}>
             <div className={classes.Spacer}/>
-            <h3>Let's get social!</h3>
-            <SocialMediaButtons/>
+            <Link
+              to={{
+                pathname: '/',
+                search: 'target=services'
+              }}
+              className="button"
+            >
+              See Our Services
+            </Link>
             <Link
               to="/blog"
-              className={classes.AllArticlesButton + ' button'}
+              className="button"
             >
               See All Articles
             </Link>
-          </div>
+          </nav>
         </div>
       </div>
     );

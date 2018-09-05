@@ -1,10 +1,16 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Social_media_Marketing_Inline_2.png';
 import image3 from '../../../assets/images/servicesContent/Social_Media_Influencer_Inline.png';
+import {Link} from 'react-router-dom';
 
 const socialMedia = () => (
   <Aux>
+    <Helmet>
+      <title>Marketiu | Social Media & Influencer Marketing</title>
+      <meta name="description" content="Discover the latest opportunities in using Social Media and Influencer Marketing to earn new customers while becoming an Industry Authority. Get a free Audit & Consultation session today."/>
+    </Helmet>
     <p>
       Sometimes it can feel like having an “online life” makes you miss amazing moments in your real one. Not to say,
       making sure all your posts are scheduled for the best hours on each platform, all online campaigns are on track
@@ -30,6 +36,17 @@ const socialMedia = () => (
     <p>
       It’s your time to be heard!
     </p>
+    <div className="services-cta">
+      <Link
+        to={{
+          pathname: '/',
+          search: 'target=contact'
+        }}
+        className="button"
+      >
+        Let's get social
+      </Link>
+    </div>
     <p>
       <strong>
         Expand your Social Brand Awareness and Reach further

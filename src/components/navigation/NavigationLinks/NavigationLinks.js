@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import classes from './NavigationLinks.css';
+import {Link} from 'react-router-dom';
 import Aux from '../../../hoc/Aux/Aux';
 
 const navigationLinks = (props) => (
@@ -46,15 +47,68 @@ const navigationLinks = (props) => (
       </Link>
     </li>
     <li>
-      <Link
-        to={{
-          pathname: '/',
-          search: 'target=blog'
-        }}
-        onClick={props.clickHandler}
-      >
-        Blog
-      </Link>
+      {props.isFooter ? (
+        <Link
+          to={{
+            pathname: '/',
+            search: 'target=blog'
+          }}
+          onClick={props.clickHandler}
+        >
+          Blog
+        </Link>
+      ) : (
+        <div className={classes.DropDown}>
+          <a className={classes.DropDownToggle}>
+            Media
+            <i className="fas fa-caret-down"/>
+          </a>
+          <ul className={classes.DropDownMenu}>
+            <li>
+              <a
+                href="https://open.spotify.com/show/3AHKLMY3iDyYyaYl2zrLqL"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={props.clickHandler}
+              >
+                Podcast
+              </a>
+            </li>
+            <li>
+              <Link
+                to={{
+                  pathname: '/',
+                  search: 'target=blog'
+                }}
+                onClick={props.clickHandler}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://open.spotify.com/show/3AHKLMY3iDyYyaYl2zrLqL"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={props.clickHandler}
+              >
+                Video
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@MarketiuLondon"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={props.clickHandler}
+              >
+                Medium
+              </a>
+            </li>
+          </ul>
+        </div>
+      )
+      }
     </li>
     <li>
       <Link

@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import classes from './AboutUs.css';
 
 const aboutUsData = [
-  'Best global brands can only lead, thrive and prosper by developing meaningful ' +
-  'relationships with their customers through industry-leading Digital Marketing tools ' +
-  'supported by unique, tailored and smart Strategy. We’re here to help you put all these ' +
-  'elements together in a perfectly tailored and optimised system, accelerate your success ' +
-  'and Market-You in the most effective and powerful way!',
-
   'Born at the heart of London from an insanely passionate and lively team of Top-class ' +
   'Marketers and Strategists, we are on a mission to help Brands get famous by tapping into ' +
   'the power of Intelligent Digital Marketing Communications. Having worked with a wide ' +

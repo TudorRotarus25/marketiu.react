@@ -36,7 +36,7 @@ class Services extends Component {
       case 'digital-ppc-management':
         return {
           image: digitalPpcManagementImage,
-          title: 'Digital & PPC Campaign Management & Automation',
+          title: 'Digital, Spotify & PPC Campaign Management & Automation',
           body: <DigitalPpcManagement/>,
         };
       case 'web-design':

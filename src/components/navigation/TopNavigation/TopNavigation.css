@@ -72,7 +72,7 @@
   }
 }
 
-.HamburgerMenu i {
+.HamburgerMenu i:global(.fa) {
   color: #fff;
   font-size: 25px;
   line-height: 105px;
@@ -80,12 +80,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .HamburgerMenu i {
+  .HamburgerMenu i:global(.fa) {
     line-height: 70px;
   }
 }
 
-.HamburgerMenu.open i {
+.HamburgerMenu.open i:global(.fa) {
   color: inherit;
 }
 

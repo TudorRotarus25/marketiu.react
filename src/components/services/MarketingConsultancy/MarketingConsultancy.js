@@ -1,9 +1,14 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Marketing_Strategy_Consulting_in1.png';
 
 const marketingConsultancy = () => (
   <Aux>
+    <Helmet>
+      <title>Marketiu | Marketing Strategy & Consulting Services</title>
+      <meta name="description" content="Our team of Chartered Marketing Strategists are here to help you transform your business and tap into the power of Integrated Marketing Communications while becoming a magnet for new customers. Discover how we can help."/>
+    </Helmet>
     <p>
       In order to make it truly powerful, we have to look at Marketing not only as a process or department within a
       business, but as a “mindset” all through. It’s an essential “piece” from your company’s puzzle, and having each of

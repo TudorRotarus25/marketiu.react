@@ -1,8 +1,13 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 
 const webDesign = () => (
   <Aux>
+    <Helmet>
+      <title>Marketiu | Web & Mobile App Design & Development</title>
+      <meta name="description" content="Your website and Mobile App are the most important touch points in a customer journey, and maybe the most critical in converting new clients while telling your brand “Story”. Make sure you have them produced at the highest standard! Find out more here."/>
+    </Helmet>
     <p>
       Your website is one of the most important touch points in a customer journey, and maybe the most critical in
       converting new clients while telling your brand “Story”. The same goes for Mobile Apps, which are scaling as

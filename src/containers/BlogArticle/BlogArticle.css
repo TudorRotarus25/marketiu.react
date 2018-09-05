@@ -12,7 +12,7 @@
   margin-top: 50px;
 }
 
-.ArticleTitle h2 {
+.ArticleTitle h1 {
   max-width: 800px;
   margin: auto;
   line-height: 1.5;
@@ -35,11 +35,15 @@
   width: 100%;
 }
 
-.SocialMedia {
-  padding: 2rem;
+.ArticleFooterNavigation {
+  padding: 1rem 0 2rem 0;
   text-align: center;
 }
 
-.SocialMedia h3 {
-  margin: 0;
+.ArticleFooterNavigation .Spacer {
+  margin-bottom: 4rem;
+}
+
+.ArticleFooterNavigation a {
+  margin: 0 20px;
 }

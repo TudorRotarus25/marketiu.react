@@ -1,9 +1,14 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Marketing_Strategy_Consulting_in1.png';
 
 const digitalPpcManagement = () => (
   <Aux>
+    <Helmet>
+      <title>Marketiu | Digital, Spotify & PPC Campaign Management & Automation</title>
+      <meta name="description" content="Integrate Technology into Marketing, and sky-rocket your campaign results while targeting the exact type of customer you want, on the right channel, with the right message - all automated! Find out more here."/>
+    </Helmet>
     <div className="row">
       <div className="column">
         <p>
@@ -19,9 +24,9 @@ const digitalPpcManagement = () => (
       </div>
     </div>
     <p>
-      From Web Banners to Interactive website HTML, Pop-up notifications or PPC /Google Adwords campaigns, our lively
-      and highly experienced team is here to ensure your conversion and up-selling ratios increase month-on-month, while
-      your brand reputation and profits scale, helping your business flourish in the new Digital Age.
+      From Web Banners to Interactive website HTML, Spotify Marketing or PPC / Google Search campaigns, our lively and highly
+      experienced team is here to ensure your conversion and up-selling ratios increase month-on-month, while your brand reputation
+      and profits scale, helping your business flourish in the new Digital Age.
     </p>
   </Aux>
 );

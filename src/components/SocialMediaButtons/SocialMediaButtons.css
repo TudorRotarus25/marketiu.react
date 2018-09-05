@@ -9,8 +9,15 @@
 
 .SocialMediaButtons li a {
   font-size: 3em;
-  transition: 0.2s;
 }
+
+/*.SocialMediaButtons li a i {*/
+  /*transition: 0.2s;*/
+/*}*/
+
+/*.SocialMediaButtons li a:hover i {*/
+  /*color: #8c0010;*/
+/*}*/
 
 @media screen and (max-width: 1000px) {
   .SocialMediaButtons li a {

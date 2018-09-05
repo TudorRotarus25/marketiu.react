@@ -21,3 +21,8 @@
   text-align: center;
   padding: 20px 0;
 }
+
+:global(.services-cta) {
+  text-align: center;
+  margin: 50px 0;
+}

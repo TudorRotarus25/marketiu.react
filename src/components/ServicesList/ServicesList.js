@@ -24,7 +24,7 @@ const servicesData = [
   {
     image: digitalPpcImage,
     link: 'digital-ppc-management',
-    title: 'Digital & PPC Campaign Management & Automation',
+    title: 'Digital, Spotify & PPC Campaign Management & Automation',
     description: 'From Web Banners, Affiliate Marketing, SEO, or Adwords campaigns, our specialist team is ready to help you implement and manage all the required campaigns, while you take time off and enjoy the results.',
   },
   {

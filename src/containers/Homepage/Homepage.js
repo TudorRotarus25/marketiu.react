@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Helmet from 'react-helmet';
 import classes from './Homepage.css';
 import heroImage from '../../assets/images/banners/Home1.jpg';
 import HeroBannerFullSize from '../../components/HeroBannerFullSize/HeroBannerFullSize';
@@ -72,6 +73,10 @@ class Homepage extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Marketiu | Digital Marketing Agency in London</title>
+          <meta name="description" content="We help our clients get notably higher returns for their Marketing budgets by creating innovative Cross-Channel Digital Marketing Communications Systems, combining Strategy, Social Media, Content, Voice Tech, Spotify, Email, CRM Marketing Automation."/>
+        </Helmet>
         <HeroBannerFullSize image={heroImage}/>
         <main>
           <p className={classes.IntroText}>

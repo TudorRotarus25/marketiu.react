@@ -1,10 +1,16 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Media_Production_Inline.png';
 import image2 from '../../../assets/images/servicesContent/Photography_Inline.png';
+import {Link} from 'react-router-dom';
 
 const mediaProduction = () => (
   <Aux>
+    <Helmet>
+      <title>Marketiu | Photo, Video, HTML & Graphic Media Production</title>
+      <meta name="description" content="In need of a new Corporate Video, Product Photo Session, Digital Assets or Media Content? We know it’s challenging getting the best results without amazing, eye-catching branding, and that’s why we have partnered with the best Designers and Media Producers, offering you full control over each aspect of the final work. Get your free quote here."/>
+    </Helmet>
     <h4>Professional Video Production & Edit</h4>
     <p>
       With the major increase in effectiveness and engagement Video Marketing has seen within all industries during the
@@ -35,6 +41,17 @@ const mediaProduction = () => (
     <p>
       Curious to find out more? Give us a shout and let’s roll this out!
     </p>
+    <div className="services-cta">
+      <Link
+        to={{
+          pathname: '/',
+          search: 'target=contact'
+        }}
+        className="button"
+      >
+        Let's get social
+      </Link>
+    </div>
     <h4>Graphic, Logo & HTML Design</h4>
     <div className="row">
       <div className="column">
@@ -59,6 +76,17 @@ const mediaProduction = () => (
       formats, don’t be shy and let us know all your crazy ideas - our team is crazy enough to turn them all into
       reality!
     </p>
+    <div className="services-cta">
+      <Link
+        to={{
+          pathname: '/',
+          search: 'target=contact'
+        }}
+        className="button"
+      >
+        Contact Us
+      </Link>
+    </div>
     <h4>Photography Services</h4>
     <div className="row">
       <div className="column">
