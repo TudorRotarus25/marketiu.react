@@ -73,7 +73,7 @@ class Services extends Component {
         </div>
         <main>
           <div className={classes.ServicesBody}>
-            <h2>{serviceData.title}</h2>
+            <h1>{serviceData.title}</h1>
             <div className="spacer"/>
             {serviceData.body}
             <div className={classes.CtaContainer}>

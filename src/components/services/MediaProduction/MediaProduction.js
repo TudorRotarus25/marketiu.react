@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Aux from '../../../hoc/Aux/Aux';
 import image1 from '../../../assets/images/servicesContent/Media_Production_Inline.png';
 import image2 from '../../../assets/images/servicesContent/Photography_Inline.png';
+import image3 from '../../../assets/images/servicesContent/Photography_2.jpg';
 import {Link} from 'react-router-dom';
 
 const mediaProduction = () => (
@@ -49,7 +50,7 @@ const mediaProduction = () => (
         }}
         className="button"
       >
-        Let's get social
+        Get in Touch
       </Link>
     </div>
     <h4>Graphic, Logo & HTML Design</h4>
@@ -68,7 +69,7 @@ const mediaProduction = () => (
         </p>
       </div>
       <div className="column">
-        <img src={image1} alt=""/>
+        <img src={image3} alt=""/>
       </div>
     </div>
     <p>

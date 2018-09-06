@@ -2,11 +2,11 @@ import React from 'react';
 import classes from './PartnersSection.css';
 import cimLogo from '../../assets/images/partners/CIM-logo-2.jpg';
 import googleLogo from '../../assets/images/partners/Google_Partners_logo_blogpage.jpg';
-import kartraLogo from '../../assets/images/partners/kartra.png';
-import fbLogo from '../../assets/images/partners/Official-Facebook-Logo.png';
-import semrushLogo from '../../assets/images/partners/semrush.png';
-import spotifyLogo from '../../assets/images/partners/spotify-horizontal-logo.png';
-import tailwindLogo from '../../assets/images/partners/tailwind-888.png';
+import kartraLogo from '../../assets/images/partners/Kartra-Logo.png';
+import fbLogo from '../../assets/images/partners/optimizedwebmedia-facebook-marketing-partners-certification-credentials.png';
+import semrushLogo from '../../assets/images/partners/semrush-Marketiu_logo.jpg';
+import spotifyLogo from '../../assets/images/partners/Spotify.jpg';
+import tailwindLogo from '../../assets/images/partners/tailwind_marketiu.jpg';
 import youtubeLogo from '../../assets/images/partners/youtube-partner-program.png';
 
 const partnersSection = () => (

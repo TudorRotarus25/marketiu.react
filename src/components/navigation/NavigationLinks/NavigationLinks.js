@@ -87,7 +87,7 @@ const navigationLinks = (props) => (
             </li>
             <li>
               <a
-                href="https://open.spotify.com/show/3AHKLMY3iDyYyaYl2zrLqL"
+                href="https://www.youtube.com/channel/UCS35zbvz8Ji3JGDIKoyXWag"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={props.clickHandler}

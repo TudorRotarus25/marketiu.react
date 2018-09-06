@@ -56,6 +56,12 @@ class BlogArticle extends Component {
           <nav className={classes.ArticleFooterNavigation}>
             <div className={classes.Spacer}/>
             <Link
+              to="/blog"
+              className="button"
+            >
+              See All Articles
+            </Link>
+            <Link
               to={{
                 pathname: '/',
                 search: 'target=services'
@@ -63,12 +69,6 @@ class BlogArticle extends Component {
               className="button"
             >
               See Our Services
-            </Link>
-            <Link
-              to="/blog"
-              className="button"
-            >
-              See All Articles
             </Link>
           </nav>
         </div>
