@@ -1,6 +1,6 @@
 class ImagesUtil {
   static getImageBaseUrl() {
-    return 'http://marketiu.com/static/'
+    return 'https://s3.eu-west-2.amazonaws.com/marketiu-resources/static/'
   }
 }
 
