@@ -1,16 +1,14 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
-import axios from 'axios';
-import classes from './BlogArticle.css';
 import {Parser} from 'html-to-react';
-import ImagesUtil from '../../utils/ImagesUtil';
 import {Link} from 'react-router-dom';
+import classes from './BlogArticle.css';
+import {
+  getArticle,
+} from '../../store/blog/BlogActions';
 
 class BlogArticle extends Component {
-  state = {
-    article: {},
-  };
-
   scrollToTop() {
     window.scrollTo(0, 0);
   }
@@ -21,37 +19,27 @@ class BlogArticle extends Component {
     const articleIdentifier = this.props.match && this.props.match.params
       ? this.props.match.params.articleIdentifier : null;
 
-    axios.get(`blog/${articleIdentifier}`).then((response) => {
-      const article = {
-        ...response.data,
-        image: ImagesUtil.getImageBaseUrl() + response.data.image,
-      };
-
-      this.setState({
-        ...this.state,
-        article,
-      })
-    })
+    this.props.getArticleContent(articleIdentifier);
   }
 
   render() {
     return (
       <div>
         <Helmet>
-          <title>{'Marketiu | ' + this.state.article.title}</title>
-          <meta name="description" content={this.state.article.description}/>
-          <meta name="og:image" content={this.state.article.image}/>
+          <title>{'Marketiu | ' + this.props.article.title}</title>
+          <meta name="description" content={this.props.article.description}/>
+          <meta name="og:image" content={this.props.article.image}/>
         </Helmet>
         <div className={classes.HeroBanner}>
-          <img src={this.state.article.image} alt={this.state.article.identifier}/>
+          <img src={this.props.article.image} alt={this.props.article.identifier}/>
         </div>
         <div className={classes.ArticleContainer}>
           <div className={classes.ArticleTitle}>
-            <h1>{this.state.article.title}</h1>
+            <h1>{this.props.article.title}</h1>
             <div className={classes.Spacer}/>
           </div>
           <div className={classes.ArticleBody}>
-            {new Parser().parse(this.state.article.content)}
+            {new Parser().parse(this.props.article.content)}
           </div>
           <nav className={classes.ArticleFooterNavigation}>
             <div className={classes.Spacer}/>
@@ -77,4 +65,12 @@ class BlogArticle extends Component {
   }
 }
 
-export default BlogArticle;
+const mapStateToProps = state => ({
+  article: state.blog.articleContent,
+});
+
+const mapDispatchToProps = dispatch => ({
+  getArticleContent: (identifier) => dispatch(getArticle(identifier)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlogArticle);

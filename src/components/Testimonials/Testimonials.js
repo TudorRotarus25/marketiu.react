@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import classes from './Testimonials.css';
 import SimpleCarousel from '../SimpleCarousel/SimpleCarousel';
-import axios from 'axios';
-import ImagesUtil from '../../utils/ImagesUtil';
+import { populateTestimonials } from '../../store/testimonials/TestimonialsActions';
 
 class Testimonials extends Component {
-  state = {
-    testimonials: [],
-  };
-
   setSlidesHeight = () => {
     let maxHeight = 0;
     const slides = document.querySelectorAll('.slick-slide');
@@ -23,24 +19,16 @@ class Testimonials extends Component {
   };
 
   componentDidMount() {
-    axios.get('testimonials/').then((response) => {
-      const testimonials = response.data.map((testimonial) => ({
-        ...testimonial,
-        image: ImagesUtil.getImageBaseUrl() + testimonial.image,
-      }));
+    this.props.populateTestimonials();
+    window.onresize = () => this.setSlidesHeight();
+  }
 
-      this.setState({
-        ...this.state,
-        testimonials,
-      });
-
-      this.setSlidesHeight();
-      window.onresize = () => this.setSlidesHeight();
-    });
+  componentDidUpdate() {
+    this.setSlidesHeight();
   }
 
   render() {
-    const testimonialsContent = this.state.testimonials.map((testimonial) => {
+    const testimonialsContent = this.props.testimonials.map(testimonial => {
       return (
         <div
           key={testimonial.id}
@@ -79,4 +67,12 @@ class Testimonials extends Component {
   }
 }
 
-export default Testimonials;
+const mapStateToProps = state => ({
+  testimonials: state.testimonials.testimonials,
+});
+
+const mapDispatchToProps = dispatch => ({
+  populateTestimonials: () => dispatch(populateTestimonials()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Testimonials);

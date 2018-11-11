@@ -1,32 +1,16 @@
 import React, { Component } from 'react';
-import classes from './BlogList.css';
-import axios from 'axios';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import ImagesUtil from '../../utils/ImagesUtil';
+import classes from './BlogList.css';
+import { populateArticles } from '../../store/blog/BlogActions';
 
 class BlogList extends Component {
-  state = {
-    articles: [],
-  };
-
   componentDidMount() {
-    const path = `blog/${this.props.limit ? `?limit=${this.props.limit}` : ''}`;
-
-    axios.get(path).then((response) => {
-      const articles = response.data.map((article) => ({
-        ...article,
-        image: ImagesUtil.getImageBaseUrl() + article.image,
-      }));
-
-      this.setState({
-        ...this.state,
-        articles,
-      });
-    })
+    this.props.populateArticles(this.props.limit)
   }
 
   render() {
-    const articlesTemplate = this.state.articles.map((article, index) => {
+    const articlesTemplate = this.props.articles.map((article, index) => {
       return (
         <Link
           to={`/blog/${article.identifier}`}
@@ -56,4 +40,12 @@ class BlogList extends Component {
   }
 }
 
-export default BlogList;
+const mapStateToProps = state => ({
+  articles: state.blog.articles,
+});
+
+const mapDispatchToProps = dispatch => ({
+  populateArticles: limit => dispatch(populateArticles(limit)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BlogList);
